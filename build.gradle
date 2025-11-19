@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'eclipse'
     id 'application'
-    id 'org.graalvm.buildtools.native' version '0.11.2'
+    id 'org.graalvm.buildtools.native' version '0.11.3'
 }
 
 group = 'io.github.seerainer.game'
@@ -42,22 +42,20 @@ def detectSwtArtifact() {
         swtArtifact += 'gtk.linux.'
         swtWS = 'gtk'
         swtOS = 'linux'
-    }
-    else {
+    } else {
         throw new GradleException("Unsupported OS: ${os}")
     }
-    
+
     if (arch == 'x86_64' || arch == 'amd64') {
         swtArtifact += 'x86_64'
         normalizedArch = 'x86_64'
     } else if (arch == 'aarch64') {
         swtArtifact += 'aarch64'
         normalizedArch = 'aarch64'
-    }
-    else {
+    } else {
         throw new GradleException("Unsupported architecture: ${arch}")
     }
-    
+
     return "org.eclipse.platform:${swtArtifact}:${swtVersion}"
 }
 
@@ -66,7 +64,7 @@ dependencies {
         exclude group: 'org.eclipse.platform', module: 'org.eclipse.swt'
     }
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.1'
     testImplementation 'org.assertj:assertj-core:3.27.6'
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
