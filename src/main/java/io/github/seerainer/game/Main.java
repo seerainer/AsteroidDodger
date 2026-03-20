@@ -2,7 +2,7 @@ package io.github.seerainer.game;
 
 public class Main {
     private Main() {
-	throw new IllegalStateException("Main class cannot be instantiated");
+	throw new IllegalStateException("Main class");
     }
 
     public static void main() {
