@@ -7,9 +7,9 @@ This document provides coding agents with essential information about this proje
 **Asteroid Dodger** is a Java 25 desktop game built with Eclipse SWT (Standard Widget Toolkit) and Gradle. The game supports both JVM and GraalVM native compilation for high-performance execution.
 
 - **Language:** Java 25
-- **Build System:** Gradle 9.3.0
-- **GUI Framework:** Eclipse SWT 3.132.0
-- **Testing:** JUnit Jupiter 6.0.2 + AssertJ 3.27.6
+- **Build System:** Gradle 9.4.1
+- **GUI Framework:** Eclipse SWT 3.133.0
+- **Testing:** JUnit Jupiter 6.0.3 + AssertJ 3.27.7
 - **Main Class:** `io.github.seerainer.game.Main`
 - **Package Root:** `io.github.seerainer.game`
 
